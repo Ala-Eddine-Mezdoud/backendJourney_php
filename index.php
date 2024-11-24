@@ -41,19 +41,30 @@
             <th>Price</th>
             <th>Pages</th>
         </tr>
-        <?php 
-        foreach($books as $book){
-            echo "<tr>";
-                echo "<td>" . "$book[title]" . "</td>";
-                echo "<td>" . "$book[genre]" . "</td>";
-                echo "<td>" . "$book[price]" . "</td>";
-                echo "<td>" . "$book[pages]" . "</td>";
-            echo "</tr>";
-        }
-
-        ?>
+        <?php foreach($books as $book){ ?>
+            <tr>
+                <td> <?= $book['title'] ?>   </td>
+                <td> <?= $book['genre'] ?>   </td>
+                <td> <?= $book['price'] ?>   </td>
+                <td> <?= $book['pages'] ?>   </td>
+            </tr>
+       <?php }?>
 
     </table>
+
+    <br>
+    <br>
+
+    <?php 
+    $myarray = [1,2,3,4,5,6,7,8,9];
+    function test($value){
+        return $value > 3;
+    }
+
+    $filteredArray = array_filter($myarray, 'test');
+    print_r($filteredArray);
+    
+    ?>
 
 </body>
 </html>
