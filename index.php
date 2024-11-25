@@ -1,3 +1,5 @@
+<?php
+
 $name = 'Mezdoud Ala Eddine';
 
 
@@ -21,4 +23,4 @@ $books = [
     ];
 
 
-require("views/index.view.php");
+require("index.view.php");
