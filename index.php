@@ -47,13 +47,13 @@ catch (PDOexception $e){
 
 # fetching data from users table
 
-// $stmt = $db->query("SELECT username,email FROM users");
-// $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $db->query("SELECT username,email FROM users");
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// foreach($users as $user){
-//     echo "username: " . $user['username'] . "<br>";
-//     echo  "email: " . $user['email'];
-//     echo "<br> <br> <br>";
-// }
+foreach($users as $user){
+    echo "username: " . $user['username'] . "<br>";
+    echo  "email: " . $user['email'];
+    echo "<br> <br> <br>";
+}
 
 // require("index.view.php");
