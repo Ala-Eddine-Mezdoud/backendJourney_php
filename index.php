@@ -23,14 +23,8 @@ $books = [
     ];
 
 
-$dsn = 'mysql:host=localhost;dbname=demo;user=root;password=admin';
+require("fetchUsers.php");
 
-try {
-    $db = new PDO($dsn);
-}
-catch (PDOexception $e){
-    echo $e;
-}
 
 # inserting data into users table:
 
@@ -47,13 +41,8 @@ catch (PDOexception $e){
 
 # fetching data from users table
 
-$stmt = $db->query("SELECT username,email FROM users");
-$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach($users as $user){
-    echo "username: " . $user['username'] . "<br>";
-    echo  "email: " . $user['email'];
-    echo "<br> <br> <br>";
-}
 
-// require("index.view.php");
+
+
+require("index.view.php");

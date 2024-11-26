@@ -26,20 +26,20 @@
        <?php }?>
 
     </table>
-
     <br>
-    <br>
+    <table border=1>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+        </tr>
+        <?php foreach($users as $user){ ?>
+            <tr>
+                <td> <?= $user['username'] ?>   </td>
+                <td> <?= $user['email'] ?>   </td>
+            </tr>
+       <?php }?>
 
-    <?php 
-    $myarray = [1,2,3,4,5,6,7,8,9];
-    function test($value){
-        return $value > 3;
-    }
-
-    $filteredArray = array_filter($myarray, 'test');
-    print_r($filteredArray);
-    
-    ?>
+    </table>
 
 </body>
 </html>
